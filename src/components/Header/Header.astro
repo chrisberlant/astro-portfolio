@@ -1,0 +1,15 @@
+---
+import ProfileLinks from "./ProfileLinks/ProfileLinks.astro";
+import NavBar from "../NavBar/NavBar.astro";
+import ThemeToggler from "../ThemeToggler/ThemeToggler";
+---
+
+<header>
+    <ThemeToggler client:only />
+    <div
+        class="items-startsm:items-end mb-8 mt-2 flex flex-col justify-between gap-4 sm:mt-4 min-[700px]:flex-row md:mt-6"
+    >
+        <ProfileLinks />
+        <NavBar />
+    </div>
+</header>
