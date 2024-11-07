@@ -7,6 +7,7 @@ import Header from "../components/Header/Header.astro";
 import MobileMenu from "../components/MobileMenu/MobileMenu";
 import Blob from "../components/Blob/Blob";
 import "../styles/globals.css";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -18,19 +19,20 @@ import "../styles/globals.css";
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>Chris Berlant's Webpage</title>
+        <ViewTransitions transition:persist />
     </head>
     <body>
         <Blob
             svg={BlobSvg.src}
-            className="animate-blob fixed left-4 top-36 -z-10 size-64 opacity-40 blur-2xl"
+            className="fixed left-4 top-36 -z-10 size-64 animate-blob opacity-40 blur-2xl"
         />
         <Blob
             svg={Blob2Svg.src}
-            className="animate-blob2 animation-delay-2000 fixed -right-4 bottom-4 -z-10 size-5/12 opacity-40 blur-3xl"
+            className="animation-delay-2000 fixed -right-4 bottom-4 -z-10 size-5/12 animate-blob2 opacity-40 blur-3xl"
         />
         <Blob
             svg={Blob3Svg.src}
-            className="animate-blob3 animation-delay-1000 fixed -right-4 top-0 -z-10 size-44 blur-3xl"
+            className="animation-delay-1000 fixed -right-4 top-0 -z-10 size-44 animate-blob3 blur-3xl"
         />
         <Header />
         <main class="flex-grow"><slot /></main>

@@ -9,7 +9,7 @@ import TypeScriptLogo from "@/assets/typescript-logo.svg";
 import JavaScriptLogo from "@/assets/javascript-logo.svg";
 import DeveloperActivity from "@/assets/developer-activity.svg";
 import Card from "../components/Card/Card";
-import Description from "../components/Header/Description/Description";
+import Description from "../components/Description/Description";
 import GitHubActivity from "../components/HomePage/GitHubActivity/GitHubActivity";
 import PageTitle from "../components/PageTitle/PageTitle";
 import {
@@ -33,7 +33,7 @@ import { Image } from "astro:assets";
                 class="max-w-36 lg:max-w-48"
             />
             <div class="flex flex-col items-center text-center">
-                <h2 class="font-montserrat mb-5 text-center text-3xl font-bold">
+                <h2 class="mb-5 text-center font-montserrat text-3xl font-bold">
                     About me
                 </h2>
 
@@ -63,11 +63,11 @@ import { Image } from "astro:assets";
         </Card>
 
         <Card className="bg-card py-7">
-            <h2 class="font-montserrat mb-8 text-center text-3xl font-bold">
+            <h2 class="mb-8 text-center font-montserrat text-3xl font-bold">
                 My stack
             </h2>
             <div
-                class="font-robotoMono relative flex max-h-52 max-w-md rounded-md sm:max-w-lg sm:flex-col md:max-w-xl"
+                class="relative flex max-h-52 max-w-md rounded-md font-robotoMono sm:max-w-lg sm:flex-col md:max-w-xl"
             >
                 <Marquee className="flex-1">
                     <GlitchingSkillElement

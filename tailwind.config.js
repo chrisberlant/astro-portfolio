@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: ["class"],
-    content: ["**/*.{astro,jsx,ts,tsx}"],
+    content: ["./src/**/*.{astro,jsx,ts,tsx}"],
     theme: {
         container: {
             center: true,
@@ -68,6 +68,7 @@ export default {
                 sm: "calc(var(--radius) - 4px)",
             },
             animation: {
+                shine: "shine 8s ease-in-out infinite",
                 blob: "blob 30s infinite",
                 blob2: "blob2 50s infinite",
                 blob3: "blob3 40s infinite",
@@ -85,6 +86,10 @@ export default {
                 pop: "pop 0.7s cubic-bezier(0.27,0.53,0.28,1.30) forwards",
             },
             keyframes: {
+                shine: {
+                    from: { backgroundPosition: "200% 0" },
+                    to: { backgroundPosition: "-200% 0" },
+                },
                 blob: {
                     "0%": {
                         transform: "translate(0px, 0px) scale(1)",
