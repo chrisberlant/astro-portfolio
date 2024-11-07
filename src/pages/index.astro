@@ -33,7 +33,7 @@ import { Image } from "astro:assets";
                 class="max-w-36 lg:max-w-48"
             />
             <div class="flex flex-col items-center text-center">
-                <h2 class="mb-5 text-center font-montserrat text-3xl font-bold">
+                <h2 class="mb-5 text-3xl font-bold text-center font-montserrat">
                     About me
                 </h2>
 
@@ -63,11 +63,11 @@ import { Image } from "astro:assets";
         </Card>
 
         <Card className="bg-card py-7">
-            <h2 class="mb-8 text-center font-montserrat text-3xl font-bold">
+            <h2 class="mb-8 text-3xl font-bold text-center font-montserrat">
                 My stack
             </h2>
             <div
-                class="relative flex max-h-52 max-w-md rounded-md font-robotoMono sm:max-w-lg sm:flex-col md:max-w-xl"
+                class="relative flex max-w-md rounded-md max-h-52 font-robotoMono sm:max-w-lg sm:flex-col md:max-w-xl"
             >
                 <Marquee className="flex-1">
                     <GlitchingSkillElement
@@ -121,6 +121,6 @@ import { Image } from "astro:assets";
                 </div>
             </div>
         </Card>
-        <GitHubActivity />
+        <GitHubActivity client:load />
     </section>
 </BaseLayout>

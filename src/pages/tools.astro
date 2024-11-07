@@ -4,18 +4,16 @@ import BuildingAnimate from "@/assets/building-animate.svg";
 import BookmarksAnimate from "@/assets/bookmarks-animate.svg";
 import NotionLogo from "@/assets/notion-logo.svg";
 import VercelLogoWhite from "@/assets/vercel-logo-white.svg";
-import VercelLogoBlack from "@/assets/vercel-logo-black.svg";
 import NetlifyLogo from "@/assets/netlify-logo.svg";
-import GithubLogoBlack from "@/assets/github-logo-black.svg";
-import GithubLogoWhite from "@/assets/github-logo-white.svg";
 import ExcalidrawLogo from "@/assets/excalidraw-logo.svg";
 import WhimsicalLogo from "@/assets/whimsical-logo.svg";
 import YoutubeLogo from "@/assets/youtube-logo.svg";
 import Card from "../components/Card/Card";
 import PageTitle from "../components/PageTitle/PageTitle";
 import OrbitingCirclesTools from "../components/Tools/OrbitingCirclesTools/OrbitingCirclesTools";
-import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import GithubIcon from "../components/Icons/GithubIcon";
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout>
@@ -36,10 +34,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         class="flex flex-col flex-wrap items-center gap-2 text-center lg:items-start lg:text-left xl:pr-5"
                     >
                         <li>
-                            <span class="font-bold"> Visual Studio Code </span>{
-                                " "
-                            }
-                            is my IDE
+                            <span class="font-bold"> Visual Studio Code</span> is
+                            my IDE
                         </li>
                         <li>
                             <span class="font-bold">Windows</span> is my main operating
@@ -51,9 +47,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                             the front-end constraints
                         </li>
                         <li>
-                            Sometimes I also use{" "}
+                            Sometimes I also use
                             <span class="font-bold">Linux</span> (Arch & Debian based
-                            distributions) and{" "}
+                            distributions) and
                             <span class="font-bold">WSL</span>
                         </li>
                         <li>
@@ -136,10 +132,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                                 href="https://www.github.com/"
                                 target="_blank"
                             >
-                                <Image
-                                    src={GithubLogoWhite}
-                                    class="ml-2 mr-1.5 inline-block size-5"
-                                    alt="GitHub logo"
+                                <GithubIcon
+                                    className="mx-1 inline-block size-5"
                                 />
                                 GitHub
                             </a>{" "}
