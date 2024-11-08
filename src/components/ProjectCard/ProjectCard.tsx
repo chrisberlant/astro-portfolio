@@ -1,4 +1,4 @@
-import Badge from "../../Badge/Badge";
+import Badge from "../Badge/Badge";
 import { cn } from "@/lib/utils";
 import {
     Carousel,
@@ -47,8 +47,8 @@ export default function ProjectCard({
         >
             <h2 className="mb-2 text-2xl font-bold leading-none">{title}</h2>
 
-            <h3 className="mb-4 text-center font-bold">{description.title}</h3>
-            <div className="mb-4 flex flex-wrap justify-center gap-2">
+            <h3 className="mb-4 font-bold text-center">{description.title}</h3>
+            <div className="flex flex-wrap justify-center gap-2 mb-4">
                 {Object.keys(badges).map((spec) =>
                     badges[spec as keyof BadgesType].map((tech) => (
                         <Badge variant={spec as keyof BadgesType} key={tech}>
@@ -68,7 +68,7 @@ export default function ProjectCard({
                     {slidesUrl.map((slide, index) => (
                         <CarouselItem
                             key={slide}
-                            className="flex basis-full justify-center sm:basis-1/2 md:basis-1/3"
+                            className="flex justify-center basis-full sm:basis-1/2 md:basis-1/3"
                         >
                             <a href={slide} target="_blank">
                                 <img
@@ -89,7 +89,7 @@ export default function ProjectCard({
                 <CarouselNext />
             </Carousel>
 
-            <div className="mt-4 flex h-full">{children}</div>
+            <div className="flex h-full mt-4">{children}</div>
         </Card>
     );
 }

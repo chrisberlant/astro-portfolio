@@ -24,7 +24,8 @@ import { Image } from "astro:assets";
 <BaseLayout>
     <section class="flex flex-col items-center gap-8">
         <PageTitle>Chris Berlant's Webpage</PageTitle>
-        <Description client:load />
+
+        <Description client:only="react" />
 
         <Card className="max-w-4xl gap-4 pb-5 pt-7 lg:flex-row lg:gap-8">
             <Image
