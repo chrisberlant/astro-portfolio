@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
-import Button from "../ui/button";
+import Button from "./ui/button";
 
-export default function ThemeToggle() {
+export default function ThemeToggler() {
     const [theme, setTheme] = useState(() => {
         if (
             typeof localStorage !== "undefined" &&
@@ -37,9 +37,9 @@ export default function ThemeToggle() {
             className="absolute right-5 top-5 bg-card/80"
         >
             {theme === "dark" ? (
-                <Moon className="size-5 transition-all" />
+                <Moon className="transition-all size-5" />
             ) : (
-                <Sun className="size-5 transition-all" />
+                <Sun className="transition-all size-5" />
             )}
         </Button>
     );

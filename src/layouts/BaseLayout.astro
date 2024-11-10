@@ -1,13 +1,10 @@
 ---
-import BlobSvg from "@/assets/blob.svg";
-import Blob2Svg from "@/assets/blob2.svg";
-import Blob3Svg from "@/assets/blob3.svg";
-import Footer from "../components/Footer/Footer.astro";
-import Header from "../components/Header/Header.astro";
-import MobileMenu from "../components/MobileMenu/MobileMenu";
-import Blob from "../components/Blob/Blob";
-import "../styles/globals.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import MobileMenu from "../components/MobileMenu";
 import { ViewTransitions } from "astro:transitions";
+import BackgroundEffect from "../components/BackgroundEffect.astro";
+import "../styles/globals.css";
 ---
 
 <!doctype html>
@@ -22,18 +19,7 @@ import { ViewTransitions } from "astro:transitions";
         <ViewTransitions transition:persist />
     </head>
     <body>
-        <Blob
-            svg={BlobSvg.src}
-            className="fixed left-4 top-36 -z-10 size-64 animate-blob opacity-40 blur-2xl"
-        />
-        <Blob
-            svg={Blob2Svg.src}
-            className="animation-delay-2000 fixed -right-4 bottom-4 -z-10 size-5/12 animate-blob2 opacity-40 blur-3xl"
-        />
-        <Blob
-            svg={Blob3Svg.src}
-            className="animation-delay-1000 fixed -right-4 top-0 -z-10 size-44 animate-blob3 blur-3xl"
-        />
+        <BackgroundEffect />
         <Header />
         <main class="flex-grow"><slot /></main>
         <MobileMenu />

@@ -6,7 +6,7 @@ import {
     DropdownMenuGroup,
 } from "@/components/ui/DropDownMenu";
 import { MenuIcon, WrenchIcon, FolderIcon, UserIcon } from "lucide-react";
-import Button from "../ui/button";
+import Button from "./ui/button";
 
 export default function MobileMenu() {
     return (

@@ -1,4 +1,4 @@
-import OrbitingCircles from "../../ui/OrbitingCircles";
+import OrbitingCircles from "./ui/OrbitingCircles";
 import VSCodeLogo from "@/assets/vscode-logo.svg";
 import InsomniaLogo from "@/assets/insomnia-logo.svg";
 import DockerLogo from "@/assets/docker-logo.svg";
@@ -38,7 +38,7 @@ export default function OrbitingCirclesTools() {
 
             {/* Inner Circles */}
             <OrbitingCircles
-                className="size-8 border-none bg-transparent"
+                className="bg-transparent border-none size-8"
                 duration={20}
                 delay={20}
                 radius={innerCircleRadius}
@@ -46,7 +46,7 @@ export default function OrbitingCirclesTools() {
                 <img src={DockerLogo.src} alt="" />
             </OrbitingCircles>
             <OrbitingCircles
-                className="size-8 border-none bg-transparent"
+                className="bg-transparent border-none size-8"
                 duration={20}
                 delay={10}
                 radius={innerCircleRadius}
@@ -54,7 +54,7 @@ export default function OrbitingCirclesTools() {
                 <img src={InsomniaLogo.src} alt="" />
             </OrbitingCircles>
             <OrbitingCircles
-                className="size-8 border-none bg-transparent"
+                className="bg-transparent border-none size-8"
                 duration={20}
                 delay={55}
                 radius={innerCircleRadius}
@@ -64,7 +64,7 @@ export default function OrbitingCirclesTools() {
 
             {/* Outer Circles (reverse) */}
             <OrbitingCircles
-                className="size-9 border-none bg-transparent md:size-12"
+                className="bg-transparent border-none size-9 md:size-12"
                 reverse
                 radius={outerCircleRadius}
                 duration={20}
@@ -72,7 +72,7 @@ export default function OrbitingCirclesTools() {
                 <img src={VSCodeLogo.src} alt="" />
             </OrbitingCircles>
             <OrbitingCircles
-                className="size-9 border-none bg-transparent md:size-12"
+                className="bg-transparent border-none size-9 md:size-12"
                 reverse
                 radius={outerCircleRadius}
                 duration={20}

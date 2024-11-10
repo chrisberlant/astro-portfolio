@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,11 +59,7 @@
     }
 
     body {
-        @apply min-h-screen bg-background pb-4 pt-8 text-foreground;
-    }
-
-    #root {
-        @apply flex min-w-full flex-col px-3 sm:px-4 lg:px-8;
+        @apply min-h-screen bg-background pb-4 pt-8 text-foreground min-w-full px-3 sm:px-4 lg:px-8;
     }
 }
 

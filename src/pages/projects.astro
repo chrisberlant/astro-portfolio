@@ -1,10 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-import { type ProjectType } from "../components/ProjectCard/ProjectCard";
-import PageTitle from "../components/PageTitle/PageTitle";
-import ProjectCard from "../components/ProjectCard/ProjectCard";
-import ExternalLink from "../components/ExternalLink/ExternalLink";
+import { type ProjectType } from "../components/ProjectCard";
+import PageTitle from "../components/PageTitle";
+import ProjectCard from "../components/ProjectCard";
+import ExternalLink from "../components/ExternalLink";
 
 const gestionSmac: ProjectType = {
     title: "Main project: Gestion SMAC",
@@ -24,27 +24,26 @@ const gestionSmac: ProjectType = {
     },
     description: {
         title: "A mobile devices management application",
-        content: "test",
-        // content: (
-        //     <div>
-        //         <p>
-        //             This internal webapp allows a team to manage a stock of
-        //             various mobile devices (basic phones, smartphones, 4G
-        //             modems).
-        //         </p>
-        //         <p>
-        //             It includes authentication,
-        //             creating/reading/updating/deleting multiple elements, and
-        //             CSV files import/export.
-        //         </p>
-        //         <p>
-        //             An admin dashboard allows users with the required role to do
-        //             things like see the actions history and create new users
-        //             allowed to access the app.
-        //         </p>
-        //         <p>You can find the full documentation on the repositories.</p>
-        //     </div>
-        // ),
+        // content: "test",
+        content: `
+            <div>
+                <p>
+                    This internal webapp allows a team to manage a stock of
+                    various mobile devices (basic phones, smartphones, 4G
+                    modems).
+                </p>
+                <p>
+                    It includes authentication,
+                    creating/reading/updating/deleting multiple elements, and
+                    CSV files import/export.
+                </p>
+                <p>
+                    An admin dashboard allows users with the required role to do
+                    things like see the actions history and create new users
+                    allowed to access the app.
+                </p>
+                <p>You can find the full documentation on the repositories.</p>
+            </div>`,
     },
 };
 
@@ -66,25 +65,24 @@ const jobMemo: ProjectType = {
     },
     description: {
         title: "A job finding helper",
-        content: "test",
-        // content: (
-        //     <div>
-        //         <p>
-        //             Help users track their various job applications and their
-        //             associated contacts.
-        //         </p>
-        //         <p>
-        //             It includes authentication,
-        //             creating/reading/updating/deleting job offers and contacts.
-        //         </p>
-        //         <p>The main feature is the cards drag and drop.</p>
-        //         <p>
-        //             A trash bin allows the user to drag cards inside and restore
-        //             them later if needed, or delete them permanently, just like
-        //             on a desktop environment.
-        //         </p>
-        //     </div>
-        // ),
+        content: `
+            <div>
+                <p>
+                    Help users track their various job applications and their
+                    associated contacts.
+                </p>
+                <p>
+                    It includes authentication,
+                    creating/reading/updating/deleting job offers and contacts.
+                </p>
+                <p>The main feature is the cards drag and drop.</p>
+                <p>
+                    A trash bin allows the user to drag cards inside and restore
+                    them later if needed, or delete them permanently, just like
+                    on a desktop environment.
+                </p>
+            </div>
+        )`,
     },
 };
 ---
@@ -105,7 +103,6 @@ const jobMemo: ProjectType = {
                             title="Front-end"
                             type="repo"
                         />
-
                         <ExternalLink
                             link="https://github.com/chrisberlant/gestion-SMAC-back"
                             text="Back-end"
@@ -127,22 +124,24 @@ const jobMemo: ProjectType = {
                     <div
                         class="flex flex-row flex-wrap justify-center gap-6 mt-4"
                     >
-                        {
-                            /* <ExternalLink
-						variant="project"
-						text="Front-end"
-						logo={GithubLogoBlack}
-						aria-label="Open the JobMemo front-end repository"
-						link="https://github.com/chrisberlant/jobmemo-front"
-					/>
-					<ExternalLink
-						variant="project"
-						text="Back-end"
-						logo={GithubLogoBlack}
-						aria-label="Open the JobMemo back-end repository"
-						link="https://github.com/chrisberlant/jobmemo-back"
-					/> */
-                        }
+                        <ExternalLink
+                            link="https://github.com/chrisberlant/jobmemo-front"
+                            text="Front-end"
+                            title="Front-end"
+                            type="repo"
+                        />
+                        <ExternalLink
+                            link="https://github.com/chrisberlant/jobmemo-back"
+                            text="Back-end"
+                            title="Back-end"
+                            type="repo"
+                        />
+                        <ExternalLink
+                            link="https://demo--gestion-smac.netlify.app"
+                            text="Try the demo version"
+                            title="Try the demo version"
+                            type="app"
+                        />
                     </div>
                 </div>
             </ProjectCard>

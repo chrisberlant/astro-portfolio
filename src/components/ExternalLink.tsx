@@ -1,6 +1,6 @@
 import { GlobeIcon } from "lucide-react";
-import GithubIcon from "../Icons/GithubIcon";
-import { buttonVariants } from "../ui/button";
+import GithubIcon from "./Icons/GithubIcon";
+import { buttonVariants } from "./ui/button";
 
 interface ExternalLinkProps {
     link: string;

@@ -1,11 +1,10 @@
 import CV from "@/assets/cv/CV_ChrisBerlant_ReactDev.pdf";
 import MyPicture from "@/assets/my-picture.png";
-import GithubIcon from "../../Icons/GithubIcon";
-import LinkedinIcon from "../../Icons/LinkedinIcon";
-import MailIcon from "../../Icons/MailIcon";
-import PdfIcon from "../../Icons/PdfIcon";
-import ExternalLink from "../../SocialLink/SocialLink";
-import SocialLink from "../../SocialLink/SocialLink";
+import GithubIcon from "./Icons/GithubIcon";
+import LinkedinIcon from "./Icons/LinkedinIcon";
+import MailIcon from "./Icons/MailIcon";
+import PdfIcon from "./Icons/PdfIcon";
+import SocialLink from "./SocialLink";
 
 export default function ProfileLinks() {
     return (

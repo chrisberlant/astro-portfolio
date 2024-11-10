@@ -1,4 +1,4 @@
-import Badge from "../Badge/Badge";
+import Badge from "./Badge";
 import { cn } from "@/lib/utils";
 import {
     Carousel,
@@ -7,7 +7,7 @@ import {
     CarouselPrevious,
     CarouselNext,
 } from "@/components/ui/carousel";
-import Card from "@/components/Card/Card";
+import Card from "@/components/Card";
 import type { ReactNode } from "react";
 
 export type BadgesType = {
@@ -41,7 +41,7 @@ export default function ProjectCard({
     return (
         <Card
             className={cn(
-                "max-w-7xl px-5 py-5 text-center md:px-12",
+                "max-w-7xl px-5 py-5 text-center md:px-14",
                 className,
             )}
         >

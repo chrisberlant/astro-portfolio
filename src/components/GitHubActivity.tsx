@@ -1,11 +1,9 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { CommitInfosType, CommitType } from "@/lib/types";
-import Card from "@/components/Card/Card";
+import Card from "@/components/Card";
 import { dateFormatting } from "@/lib/utils";
-import Blob from "@/components/Blob/Blob";
-import GithubIcon from "../../Icons/GithubIcon";
+import GithubIcon from "./Icons/GithubIcon";
 import NotFoundAnimate from "@/assets/not-found-animate.svg";
-
 import { LoaderCircleIcon } from "lucide-react";
 
 export default function GitHubActivity() {
