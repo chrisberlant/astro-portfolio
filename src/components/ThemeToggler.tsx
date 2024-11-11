@@ -14,8 +14,6 @@ export default function ThemeToggler() {
 
     const handleToggleClick = () => {
         setTheme(theme === "dark" ? "light" : "dark");
-        document.documentElement.className = theme === "dark" ? "dark" : "";
-        localStorage.setItem("theme", theme);
     };
 
     return (
