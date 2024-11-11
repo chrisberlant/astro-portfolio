@@ -3,30 +3,19 @@ import { Sun, Moon } from "lucide-react";
 import Button from "./ui/button";
 
 export default function ThemeToggler() {
-    const [theme, setTheme] = useState(() => {
-        if (
-            typeof localStorage !== "undefined" &&
-            localStorage.getItem("theme")
-        ) {
-            return localStorage.getItem("theme");
-        }
-        return window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-    });
+    const [theme, setTheme] = useState<"dark" | "light">(() =>
+        document.documentElement.className === "dark" ? "dark" : "light",
+    );
 
-    // Update the document's class on theme change
     useEffect(() => {
-        if (theme === "dark") {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-        if (theme) localStorage.setItem("theme", theme);
+        document.documentElement.className = theme === "dark" ? "dark" : "";
+        localStorage.setItem("theme", theme);
     }, [theme]);
 
     const handleToggleClick = () => {
         setTheme(theme === "dark" ? "light" : "dark");
+        document.documentElement.className = theme === "dark" ? "dark" : "";
+        localStorage.setItem("theme", theme);
     };
 
     return (
