@@ -1,11 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 import { type ProjectType } from "../components/ProjectCard.astro";
 import PageTitle from "../components/PageTitle";
 import ProjectCard from "../components/ProjectCard.astro";
-import ExternalLink from "../components/ExternalLink";
-const projects = await Astro.glob("../projects/*.md");
+const projects: ProjectType[] = await Astro.glob("../projects/*.md");
 ---
 
 <BaseLayout
