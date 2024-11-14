@@ -11,61 +11,6 @@ const projects: ProjectType[] = await Astro.glob("../projects/*.md");
         <PageTitle>My projects</PageTitle>
         <div class="flex flex-col flex-wrap items-center justify-center gap-8">
             {projects.map((project) => <ProjectCard project={project} />)}
-
-            <!-- <ProjectCard project={gestionSmac} client:only="react">
-                <div class="flex flex-col items-center justify-between flex-1">
-                    {gestionSmac.description.content}
-                    <div
-                        class="flex flex-row flex-wrap justify-center gap-6 mt-4"
-                    >
-                        <ExternalLink
-                            link="https://github.com/chrisberlant/gestion-SMAC-front"
-                            text="Front-end"
-                            title="Front-end"
-                            type="repo"
-                        />
-                        <ExternalLink
-                            link="https://github.com/chrisberlant/gestion-SMAC-back"
-                            text="Back-end"
-                            title="Back-end"
-                            type="repo"
-                        />
-                        <ExternalLink
-                            link="https://demo--gestion-smac.netlify.app"
-                            text="Try the demo version"
-                            title="Try the demo version"
-                            type="app"
-                        />
-                    </div>
-                </div>
-            </ProjectCard>
-            <ProjectCard project={jobMemo} client:only="react">
-                <div class="flex flex-col items-center justify-between flex-1">
-                    {jobMemo.description.content}
-                    <div
-                        class="flex flex-row flex-wrap justify-center gap-6 mt-4"
-                    >
-                        <ExternalLink
-                            link="https://github.com/chrisberlant/jobmemo-front"
-                            text="Front-end"
-                            title="Front-end"
-                            type="repo"
-                        />
-                        <ExternalLink
-                            link="https://github.com/chrisberlant/jobmemo-back"
-                            text="Back-end"
-                            title="Back-end"
-                            type="repo"
-                        />
-                        <ExternalLink
-                            link="https://demo--gestion-smac.netlify.app"
-                            text="Try the demo version"
-                            title="Try the demo version"
-                            type="app"
-                        />
-                    </div>
-                </div>
-            </ProjectCard> -->
         </div>
     </section></BaseLayout
 >
