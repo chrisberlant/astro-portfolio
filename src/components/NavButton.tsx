@@ -1,4 +1,5 @@
-import { buttonVariants } from "./ui/button";
+import { useEffect, useState } from "react";
+import Button from "./ui/button";
 
 interface NavButtonProps {
     link: string;
@@ -6,9 +7,19 @@ interface NavButtonProps {
 }
 
 export default function NavButton({ link, text }: NavButtonProps) {
+    const [currentUrl, setCurrentUrl] = useState<string | null>(null);
+
+    useEffect(() => {
+        setCurrentUrl(window.location.pathname);
+    }, []);
+
     return (
-        <a href={link} className={buttonVariants({ variant: "link" })}>
-            {text}
-        </a>
+        <Button
+            variant="link"
+            className={currentUrl === link ? "font-bold" : ""}
+            asChild
+        >
+            <a href={link}>{text}</a>
+        </Button>
     );
 }
