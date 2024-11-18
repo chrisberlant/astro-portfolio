@@ -15,7 +15,7 @@ export default function NavButton({ link, text }: NavButtonProps) {
 
     return (
         <Button
-            variant="link"
+            variant="linkHover2"
             className={currentUrl === link ? "font-bold" : ""}
             asChild
         >
