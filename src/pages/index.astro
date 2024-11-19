@@ -25,7 +25,20 @@ import { Image } from "astro:assets";
     <section class="flex flex-col items-center gap-8">
         <PageTitle>Chris Berlant's Webpage</PageTitle>
 
-        <Description client:only="react" />
+        <div
+            class="flex h-40 flex-col text-center font-robotoMono text-2xl font-bold min-[458px]:h-32 sm:h-40 sm:text-3xl min-[1128px]:h-36"
+        >
+            <div class="flex justify-center">
+                <span class="mb-4">Hi I'm Chris!</span>
+            </div>
+            <Description client:only="react">
+                <div
+                    slot="fallback"
+                    class="h-40 min-[458px]:h-32 sm:h-40 sm:text-3xl min-[1128px]:h-36"
+                >
+                </div>
+            </Description>
+        </div>
 
         <Card className="max-w-4xl gap-4 pb-5 pt-7 lg:flex-row lg:gap-8">
             <Image

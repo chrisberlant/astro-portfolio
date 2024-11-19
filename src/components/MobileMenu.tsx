@@ -15,7 +15,6 @@ export default function MobileMenu() {
                 <DropdownMenuTrigger asChild>
                     <Button
                         variant="outline"
-                        size="md"
                         className="bg-popover rounded-xl"
                         aria-label="Navigation menu"
                     >
@@ -24,43 +23,19 @@ export default function MobileMenu() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                     <DropdownMenuGroup>
-                        <a
-                            href="/"
-                            onClick={() =>
-                                window.scroll({
-                                    top: 180,
-                                    behavior: "smooth",
-                                })
-                            }
-                        >
+                        <a href="/">
                             <DropdownMenuItem className="text-lg cursor-pointer hover:bg-accent">
                                 <UserIcon className="mr-2 size-4" />
                                 About me
                             </DropdownMenuItem>
                         </a>
-                        <a
-                            href="/tools"
-                            onClick={() =>
-                                window.scroll({
-                                    top: 180,
-                                    behavior: "smooth",
-                                })
-                            }
-                        >
+                        <a href="/tools">
                             <DropdownMenuItem className="text-lg cursor-pointer hover:bg-accent">
                                 <WrenchIcon className="mr-2 size-4" />
                                 My tools
                             </DropdownMenuItem>
                         </a>
-                        <a
-                            href="/projects"
-                            onClick={() =>
-                                window.scroll({
-                                    top: 180,
-                                    behavior: "smooth",
-                                })
-                            }
-                        >
+                        <a href="/projects">
                             <DropdownMenuItem className="text-lg cursor-pointer hover:bg-accent">
                                 <FolderIcon className="mr-2 size-4" />
                                 My projects

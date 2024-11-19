@@ -80,9 +80,10 @@ export default function GitHubActivity() {
             <h2 className="px-4 mb-8 text-3xl font-bold text-center font-montserrat">
                 Recent public GitHub activity
             </h2>
+            <GithubIcon className="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-70 -z-10 left-1/2 top-1/2 size-56" />
 
             {commits.loading && (
-                <LoaderCircleIcon size={60} className="mb-4 animate-spin" />
+                <LoaderCircleIcon size={120} className="mb-4 animate-spin" />
             )}
 
             {commits.error && (
@@ -101,7 +102,6 @@ export default function GitHubActivity() {
 
             {commits.data && (
                 <>
-                    <GithubIcon className="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-70 -z-10 left-1/2 top-1/2 size-56" />
                     <ol className="flex flex-col gap-2 break-all sm:pl-4 lg:pl-10 xl:pl-16">
                         {commits.data.map((commit) => (
                             <li key={commit.date}>

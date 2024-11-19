@@ -14,6 +14,8 @@ import OrbitingCirclesTools from "../components/OrbitingCirclesTools";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import GithubIcon from "../components/Icons/GithubIcon";
 import { Image } from "astro:assets";
+import { LoaderCircleIcon } from "lucide-react";
+import OrbitingCirclesToolsSkeleton from "../components/OrbitingCirclesToolsSkeleton";
 ---
 
 <BaseLayout>
@@ -21,10 +23,18 @@ import { Image } from "astro:assets";
         <PageTitle>My tools</PageTitle>
         <div class="flex flex-col w-full gap-8 max-w-7xl">
             <Card
-                className="justify-evenly gap-4 pb-4 lg:flex-row lg:pb-0 lg:pl-0 lg:pr-4"
+                className="justify-evenly pb-4 gap-4 lg:flex-row lg:pb-0 lg:pl-0 lg:pr-4"
             >
-                <OrbitingCirclesTools client:only="react" />
-                <div class="flex-1">
+                <OrbitingCirclesTools client:only="react">
+                    <!-- <LoaderCircleIcon
+                        size={120}
+                        className="animate-spin"
+                        slot="fallback"
+                        className="flex-1"
+                    /> -->
+                    <OrbitingCirclesToolsSkeleton slot="fallback" />
+                </OrbitingCirclesTools>
+                <div class="flex-1 lg:py-7">
                     <h2
                         class="mb-8 text-3xl font-bold text-center font-montserrat sm:mb-12"
                     >

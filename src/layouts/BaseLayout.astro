@@ -50,7 +50,7 @@ import "../styles/globals.css";
         <BackgroundEffect />
         <Header />
         <main class="flex-grow"><slot /></main>
-        <MobileMenu />
+        <MobileMenu client:media="(max-width: 639px)" transition:persist />
         <Footer />
     </body>
 </html>

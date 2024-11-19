@@ -5,6 +5,7 @@ import ImagesCarousel from "./ImagesCarousel";
 import Card from "@/components/Card";
 import type { MarkdownInstance } from "astro";
 import ExternalLink from "./ExternalLink";
+import ProjectImagesSkeleton from "./ProjectImagesSkeleton";
 
 export type TagsType = {
     front: string[];
@@ -44,7 +45,7 @@ const { project, className } = Astro.props;
 const { title, images, description, links, tags } = project.frontmatter;
 ---
 
-<Card className={cn("max-w-7xl px-5 py-5 text-center md:px-14", className)}>
+<Card className={cn("max-w-7xl px-5 py-5 text-center md:px-4", className)}>
     <h2 class="mb-2 text-2xl font-bold leading-none">{title}</h2>
 
     <h3 class="mb-4 font-bold text-center">{description}</h3>
@@ -58,8 +59,10 @@ const { title, images, description, links, tags } = project.frontmatter;
         }
     </div>
 
-    <ImagesCarousel images={images} title={title} client:only="react" />
-    <div class="flex h-full mt-4">{project.rawContent}</div>
+    <ImagesCarousel images={images} title={title} client:only="react">
+        <ProjectImagesSkeleton slot="fallback" />
+    </ImagesCarousel>
+    <div class="flex h-full mt-4 md:px-10">{project.rawContent}</div>
     <div class="flex flex-row flex-wrap justify-center gap-6 mt-4">
         {
             links.map((link) => (
